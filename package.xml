@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>waypoint_editor_ros</name>
+  <version>0.0.0</version>
+  <description>The waypoint_editor_ros package</description>
+  <maintainer email="tnakamura.amsl@gmail.com">Toshiki Nakamura</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>geometry_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf</depend>
+
+  <exec_depend>roslaunch</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>python3-pyqt5</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>map_server</exec_depend>
+
+  <test_depend>rostest</test_depend>
+  <test_depend>roslint</test_depend>
+</package>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/launch/waypoints.yaml"/>
+    <node pkg="waypoint_editor_ros" type="waypoint_editor_node.py" name="waypoint_editor" output="screen">
+        <param name="waypoint_file" value="$(arg waypoint_file)"/>
+    </node>
+    <node pkg="waypoint_editor_ros" type="edit_client_node.py" name="edit_client" output="screen"/>
+</launch>
