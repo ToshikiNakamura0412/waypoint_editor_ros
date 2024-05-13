@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="waypoint_file" default="$(find waypoint_editor_ros)/launch/waypoints.yaml"/>
+    <arg name="width_ratio" default="0.3"/>
+    <arg name="map_path" default="$(find waypoint_manager_ros)/maps/map.yaml"/>
+    <arg name="rviz_path" default="$(find waypoint_editor_ros)/launch/rviz.rviz"/>
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_path)"/>
+    <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_path)"/>
+    <include file="$(find waypoint_manager_ros)/launch/waypoint_manager.launch">
+        <arg name="waypoint_file" value="$(arg waypoint_file)"/>
+        <arg name="width_ratio" value="$(arg width_ratio)"/>
+    </include>
+    <include file="$(find waypoint_editor_ros)/launch/waypoint_editor.launch">
+        <arg name="waypoint_file" value="$(arg waypoint_file)"/>
+    </include>
+</launch>
