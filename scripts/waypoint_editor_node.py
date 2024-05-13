@@ -62,8 +62,9 @@ class WaypointEditor:
         self._version: int = -1
         self._waypoints_backup: list = list()
         self._waypoints: list = self._load(self._waypoint_file)
-        self._backup(self._waypoints)
-        self._save(self._waypoints, self._waypoint_file)
+        if len(self._waypoints) > 0:
+            self._backup(self._waypoints)
+            self._save(self._waypoints, self._waypoint_file)
 
     def _handle_edit_waypoint(self, req: EditPoint) -> EditPointResponse:
         """Handle edit waypoint service
