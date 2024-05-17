@@ -12,20 +12,20 @@ The ROS package of waypoint editing tool
 ### Edit the waypoint
 - add
   - Add a waypoint to the end of the list
-  - No need for ID
-  - Need for the goal pose ("2D Nav Goal" in rviz)
+  - The id is not needed
+  - The goal pose is needed ("2D Nav Goal" in rviz)
 - modify
   - Modify the waypoint
-  - Need for ID
-  - Need for the goal pose ("2D Nav Goal" in rviz)
+  - The id is needed
+  - The goal pose is needed ("2D Nav Goal" in rviz)
 - insert
   - Insert a waypoint
-  - Need for ID
-  - Need for the goal pose ("2D Nav Goal" in rviz)
+  - The id is needed
+  - The goal pose is needed ("2D Nav Goal" in rviz)
 - delete
   - Delete the waypoint
-  - Need for ID
-  - No need for the goal pose
+  - The id is needed
+  - The goal pose is not needed
 ### Undo/Redo
 - undo
   - Click on "←" button
