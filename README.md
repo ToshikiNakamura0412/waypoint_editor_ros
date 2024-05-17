@@ -64,6 +64,16 @@ roslaunch waypoint_editor_ros waypoint_editor.launch
 
 ## Running the demo
 ```
+# clone repository
+cd /path/to/your/catkin_ws/src
+git clone https://github.com/ToshikiNakamura0412/waypoint_manager_ros.git
+
+# build
+cd /path/to/your/catkin_ws
+rosdep install -riy --from-paths src --rosdistro noetic
+catkin build waypoint_manager_ros
+
+# run demo
 roslaunch waypoint_editor_ros test.launch
 ```
 
